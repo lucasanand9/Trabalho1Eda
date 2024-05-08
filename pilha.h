@@ -15,9 +15,9 @@ int empilha(int obj, int pilha,  multipilha *mult);
 
 int desempilha(int pilha,  multipilha *mult);
 
-int testeCheia( multipilha *mult);
+int testeCheia(multipilha *mult);
 
-int testeVazio( multipilha *mult);
+int testeVazio(int pilha, multipilha *mult);
 
 int buscaTopo(int pilha,  multipilha *mult);
 
