@@ -7,7 +7,7 @@ typedef struct pilha{
   
 multipilha *criaPilhas(int tam);
 
-void destroiPilhas( multipilha *mult);
+void destroiPilhas( multipilha **mult);
 
 void reiniciaPilha(int pilha, multipilha *mult);
 

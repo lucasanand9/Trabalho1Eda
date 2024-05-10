@@ -14,10 +14,10 @@ multipilha *criaPilhas(int tam){
     return mult;
 }
 
-void destroiPilhas( multipilha *mult){
-    free(mult->vet);
-    free(mult);
-    mult = NULL;
+void destroiPilhas( multipilha **mult){
+    free((*mult)->vet);
+    free(*mult);
+    *mult = NULL;
 }
 
 void reiniciaPilha(int pilha ,multipilha *mult){

@@ -10,8 +10,8 @@ int main(){
     int obj_out;
     int obj_in;
     int ctz;
+    int tamanho;
     while (index != 0){
-        printf("%i\n", mp);
         printf("Digite uma opção: \n");
         printf("(1)Adicionar elemento nas pilhas\n");
         printf("(2)Remover elemento nas pilhas\n");
@@ -25,7 +25,7 @@ int main(){
         switch (index){
         case 0:
             printf("Saindo...\n");
-            destroiPilhas(mp);
+            destroiPilhas(&mp);
             return 0;
         break;
         case 1:
@@ -100,10 +100,9 @@ int main(){
             printf("3...\n");
             printf("2...\n");
             printf("1...\n");
-            destroiPilhas(mp);
+            destroiPilhas(&mp);
         break;
         case 7:
-            int tamanho;
             if(mp == NULL){
                 printf("Qual o tamanho das pilhas?\n");
                 scanf("%i", &tamanho);
@@ -114,7 +113,7 @@ int main(){
                 if(ctz){
                     break;
                 }
-                destroiPilhas(mp);
+                destroiPilhas(&mp);
                 printf("Qual o tamanho das pilhas?\n");
                 scanf("%i", &tamanho);
                 mp = criaPilhas(tamanho);
