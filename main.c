@@ -25,6 +25,9 @@ int main(){
         switch (index){
         case 0:
             printf("Saindo...\n");
+	    if(mp == NULL){
+	    return 0;
+	    }
             destroiPilhas(&mp);
             return 0;
         break;
