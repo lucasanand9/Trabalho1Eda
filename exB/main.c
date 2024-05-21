@@ -34,10 +34,13 @@ int main(int argc, char *argv[]){
 
         printf("%i\n", i);
 
+
         info excecao = base;
-        for(int j = 1; j<i;j++){
+        int j = 0;
+        for(j = 1; j<i;j++){
             excecao.palavra[j-1] = atual[j];
         }
+        excecao.palavra[j] = '\0';
         
         if(strcmp(excecao.palavra, "meta") == 0 || strcmp(excecao.palavra, "br@") == 0 || strcmp(excecao.palavra, "img") == 0 || strcmp(excecao.palavra, "input") == 0 || strcmp(excecao.palavra, "frame") == 0 || strcmp(excecao.palavra, "!DOCTYPE") == 0 ){
             continue;
@@ -46,10 +49,12 @@ int main(int argc, char *argv[]){
         if(a == '<' && b != '/' ){
             printf("primeiro if\n");
             info temp = base;
-            for(int j = 1; j < i; j++ ){
+            for(j = 1; j < i; j++ ){
                 temp.palavra[j-1] = atual[j];
                 printf("%s\n", temp.palavra);
             }
+            temp.palavra[j] = '\0';
+            printf("%s\n", temp.palavra);
             empilha(&temp, html);
         }
 
@@ -63,6 +68,9 @@ int main(int argc, char *argv[]){
                 temp1.palavra[j-2] = atual[j];
                 printf("%s\n", temp1.palavra);
             }
+            temp1.palavra[j-1] = '\0';
+            printf("%s\n", temp1.palavra);
+
 
             busca(&aux, html);
             printf("temp1: %s\naux: %s\n", temp1.palavra, aux.palavra);

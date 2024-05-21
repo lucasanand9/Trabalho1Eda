@@ -1,0 +1,6 @@
+#removendo todos executaveis
+*.out
+*.exe
+
+#removendo .gch
+*.gch
