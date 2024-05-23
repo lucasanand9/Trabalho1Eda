@@ -1,7 +1,6 @@
 #include "pilha.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 int main(){
     multipilha *mp = criaPilhas(10);
     int index = -1;

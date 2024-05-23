@@ -1,4 +1,0 @@
-Ana Elisa Ghanem Zanon e Lucas Anand Mazotti Ferretti
-
-Tarefa 1:
-No caso 1 inicialmente verificamos se existe uma pilha, caso não existe saimos do caso e pedimos para o usuario criar uma nova pilha, então o usuario escolhe em qual pilha ele quer adicionar um novo elemento e então ele fornece o elemento. 

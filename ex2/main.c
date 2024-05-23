@@ -53,33 +53,25 @@ int main(int argc, char *argv[]){
         }
 
         if(a == '<' && b != '/' ){
-            printf("primeiro if\n");
             info temp = base;
             for(j = 1; j < i; j++ ){
                 temp.palavra[j-1] = atual[j];
             }
             temp.palavra[j-1] = '\0';
-            printf("%s\n", temp.palavra);
             empilha(&temp, html);
         }
 
         if(a == '<' && b == '/' ){
-            printf("segundo if\n");
-               
-            
             info temp1 = base;
             info aux = base;
             for(int j = 2; j < i; j++ ){
                 temp1.palavra[j-2] = atual[j];
             }
             temp1.palavra[j-2] = '\0';
-            printf("%s\n", temp1.palavra);
 
 
             busca(&aux, html);
-            printf("temp1: %s\naux: %s\n", temp1.palavra, aux.palavra);
             if(strcmp(temp1.palavra, aux.palavra) == 0){
-                printf("desempilhando\n");
                 desempilha(&aux, html);
             }else{
                 printf("ERRO: esperado %s, recebido %s\n", aux.palavra, temp1.palavra);
@@ -90,6 +82,5 @@ int main(int argc, char *argv[]){
     }
     printf("Certo\n");
     
-
     return 0;
 }
